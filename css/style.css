@@ -1,4 +1,24 @@
 /* for best practice : */
+/* for best practice : */
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+/* for best practice : */
+/*Changing the value for root font-size:*/
+html {
+  /* please don't use px */
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  padding: 3rem;
+  color: #777;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box; }
+
 @keyframes move-right {
   0% {
     transform: translateX(-15rem) translateY(-0.5rem);
@@ -28,25 +48,6 @@
   100% {
     transform: translateY(0);
     opacity: 1; } }
-
-*, *::before, *::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit; }
-
-/* for best practice : */
-/*Changing the value for root font-size:*/
-html {
-  /* please don't use px */
-  font-size: 62.5%; }
-
-body {
-  font-family: "Lato", sans-serif;
-  padding: 3rem;
-  color: #777;
-  font-weight: 400;
-  line-height: 1.7;
-  box-sizing: border-box; }
 
 .header {
   position: relative;

@@ -1,0 +1,27 @@
+@import "../abstracts/vars";
+%all {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+* {
+  @extend %all;
+  &::before {
+    @extend %all;
+  }
+  &::after {
+    @extend %all;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Lato", sans-serif;
+  padding: 3rem;
+  color: $gray-color;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box;
+}

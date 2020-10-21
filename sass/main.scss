@@ -46,7 +46,7 @@ body {
   box-sizing: border-box;
 }
 
-header.header {
+.header {
   position: relative;
   height: calc(100vh - 3rem);
   background-image: linear-gradient(
@@ -60,10 +60,10 @@ header.header {
   background-size: cover;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
   padding: 4rem;
-  & .header__logo {
+  &__logo {
     height: 3.5rem;
   }
-  & .header__menu {
+  &__menu {
     position: fixed;
     top: 6rem;
     right: 6.5rem;
@@ -72,24 +72,24 @@ header.header {
     background-color: $white-color;
     border-radius: 50%;
   }
-  & .header__content {
+  &__content {
     position: absolute;
     top: 40%;
     right: 50%;
     transform: translate(50%, -50%);
-    & .header__heading {
-      color: $white-color;
-      backface-visibility: hidden;
-      margin-bottom: 6rem;
-    }
-    & .header__heading--main {
+  }
+  &__heading {
+    color: $white-color;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    &--main {
       display: block;
       font-size: 6rem;
       letter-spacing: 3.5rem;
       font-weight: 400;
       animation: move-right 1s $main-animation-function;
     }
-    & .header__heading--sub {
+    &--sub {
       display: block;
       font-size: 2rem;
       font-weight: 700;
@@ -98,8 +98,24 @@ header.header {
       animation: move-left 1s $main-animation-function;
     }
   }
+  &__menu {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    span {
+      background-color: black;
+      display: block;
+      width: 45%;
+      height: 0.2rem;
+      margin-bottom: 0.7rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
-
 .btn {
   font-weight: 400;
   padding: 2rem 4.5rem;
@@ -132,20 +148,18 @@ header.header {
     z-index: -1;
     transition: all 0.25s $main-animation-function;
   }
-}
-
-.btn--white {
-  margin: 0 auto;
-  background: $white-color;
-  color: $gray-color;
-  &::after {
-    background-color: $white-color;
+  &--white {
+    margin: 0 auto;
+    background: $white-color;
+    color: $gray-color;
+    &::after {
+      background-color: $white-color;
+    }
+  }
+  &--animated {
+    animation: move-top 1s $main-animation-function;
   }
 }
-.btn--animated {
-  animation: move-top 1s $main-animation-function;
-}
-
 @keyframes move-right {
   0% {
     transform: translateX(-15rem) translateY(-0.5rem);
@@ -184,24 +198,5 @@ header.header {
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-.header__menu {
-  cursor: pointer;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  span {
-    background-color: black;
-    display: block;
-    width: 45%;
-    height: 0.2rem;
-    margin-bottom: 0.7rem;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
 }

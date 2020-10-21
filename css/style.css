@@ -18,7 +18,7 @@ body {
   line-height: 1.7;
   box-sizing: border-box; }
 
-header.header {
+.header {
   position: relative;
   height: calc(100vh - 3rem);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
@@ -26,9 +26,9 @@ header.header {
   background-size: cover;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
   padding: 4rem; }
-  header.header .header__logo {
+  .header__logo {
     height: 3.5rem; }
-  header.header .header__menu {
+  .header__menu {
     position: fixed;
     top: 6rem;
     right: 6.5rem;
@@ -36,28 +36,42 @@ header.header {
     height: 6.5rem;
     background-color: #fff;
     border-radius: 50%; }
-  header.header .header__content {
+  .header__content {
     position: absolute;
     top: 40%;
     right: 50%;
     transform: translate(50%, -50%); }
-    header.header .header__content .header__heading {
-      color: #fff;
-      backface-visibility: hidden;
-      margin-bottom: 6rem; }
-    header.header .header__content .header__heading--main {
+  .header__heading {
+    color: #fff;
+    backface-visibility: hidden;
+    margin-bottom: 6rem; }
+    .header__heading--main {
       display: block;
       font-size: 6rem;
       letter-spacing: 3.5rem;
       font-weight: 400;
       animation: move-right 1s ease-in; }
-    header.header .header__content .header__heading--sub {
+    .header__heading--sub {
       display: block;
       font-size: 2rem;
       font-weight: 700;
       letter-spacing: 1.75rem;
       padding-left: 0.5rem;
       animation: move-left 1s ease-in; }
+  .header__menu {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .header__menu span {
+      background-color: black;
+      display: block;
+      width: 45%;
+      height: 0.2rem;
+      margin-bottom: 0.7rem; }
+      .header__menu span:last-of-type {
+        margin-bottom: 0; }
 
 .btn {
   font-weight: 400;
@@ -87,16 +101,14 @@ header.header {
     left: 0;
     z-index: -1;
     transition: all 0.25s ease-in; }
-
-.btn--white {
-  margin: 0 auto;
-  background: #fff;
-  color: #777; }
-  .btn--white::after {
-    background-color: #fff; }
-
-.btn--animated {
-  animation: move-top 1s ease-in; }
+  .btn--white {
+    margin: 0 auto;
+    background: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn--animated {
+    animation: move-top 1s ease-in; }
 
 @keyframes move-right {
   0% {
@@ -127,19 +139,3 @@ header.header {
   100% {
     transform: translateY(0);
     opacity: 1; } }
-
-.header__menu {
-  cursor: pointer;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
-  .header__menu span {
-    background-color: black;
-    display: block;
-    width: 45%;
-    height: 0.2rem;
-    margin-bottom: 0.7rem; }
-    .header__menu span:last-of-type {
-      margin-bottom: 0; }

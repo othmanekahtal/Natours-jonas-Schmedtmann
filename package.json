@@ -4,8 +4,11 @@
   "description": "landing page of Natours",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sassing":"node-sass sass/main.scss css/style.css -w"
   },
   "author": "othmane kahtal",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
 }

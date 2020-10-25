@@ -4,7 +4,7 @@
   "description": "landing page of Natours",
   "main": "index.js",
   "scripts": {
-    "sassing":"node-sass sass/main.scss css/style.css -w"
+    "sassing": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "othmane kahtal",
   "license": "ISC",

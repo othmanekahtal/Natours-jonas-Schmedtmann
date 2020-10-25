@@ -1,0 +1,13 @@
+@mixin add-gutter($gutter, $number-of-gutter, $number) {
+  width: calc-width($gutter, $number-of-gutter, $number);
+  &:not(:last-of-type) {
+    margin-right: $gutter;
+  }
+}
+@mixin hack-clear-fix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

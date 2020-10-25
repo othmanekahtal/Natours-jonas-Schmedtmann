@@ -1,0 +1,47 @@
+@import "../abstracts/variables";
+.btn {
+  &--primary {
+    display: inline-block !important;
+    font-weight: 400;
+    padding: 2rem 4.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 3.5rem;
+    transition: all 0.15s ease-in;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    &:hover {
+      transform: translateY(-0.3rem);
+      &::after {
+        transform: scale(1.4, 1.6);
+        opacity: 0;
+      }
+    }
+    &:active {
+      transform: translateY(-0.1rem);
+    }
+    &::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      border-radius: 3.5rem;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.25s $main-animation-function;
+    }
+  }
+  &--white {
+    background: $white-color;
+    color: $gray-color;
+    &::after {
+      background-color: $white-color;
+    }
+  }
+  &--animated {
+    animation: move-top 1s $main-animation-function;
+  }
+}

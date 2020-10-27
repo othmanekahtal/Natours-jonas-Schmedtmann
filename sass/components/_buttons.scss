@@ -10,7 +10,7 @@
     position: relative;
     border-radius: 3.5rem;
     transition: all 0.15s ease-in;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     text-transform: uppercase;
     &:hover {
       transform: translateY(-0.3rem);
@@ -32,6 +32,28 @@
       left: 0;
       z-index: -1;
       transition: all 0.25s $main-animation-function;
+    }
+  }
+  &--secondary {
+    font-size: $default-font-size;
+    display: inline-block;
+    text-decoration: none;
+    color: $Medium-green;
+    padding: 0.3rem;
+    transition: all 0.2s $main-animation-function;
+    background-size: 0.1rem 100%;
+    border-bottom: $Medium-green 1px solid;
+    position: relative;
+    &:hover {
+      top: -0.2rem;
+      color: $white-color;
+      background-color: $Medium-green;
+      box-shadow: 0 1rem 2rem rgba(#000000, 0.15);
+      transform: translateY(-0.2rem);
+    }
+    &:active {
+      box-shadow: 0 0.5rem 1rem rgba(#000000, 0.15);
+      transform: translateY(0);
     }
   }
   &--white {

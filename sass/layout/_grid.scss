@@ -1,26 +1,16 @@
 @import "../abstracts/functions";
 @import "../abstracts/mixins";
-$gridWidth: 114rem;
-$gutter-vertical: 4rem;
-$gutter-horizontal: 4rem;
+
 .row {
-  padding: 0.5rem;
+  padding: 0 2rem;
   max-width: $gridWidth;
-  background-color: #91ff00;
   margin: 0 auto;
-  // use that : solution 1
-  overflow: hidden;
   // or that : solution 2
   @include hack-clear-fix;
   &:not(:last-of-type) {
     margin-bottom: $gutter-vertical;
   }
   [class^="col"] {
-    padding: 10px 0;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    background-color: rgb(255, 0, 149);
     float: left;
   }
   .col-1-of-2 {

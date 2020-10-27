@@ -1,0 +1,28 @@
+.composition {
+  position: relative;
+  img {
+    position: absolute;
+    width: 55%;
+    box-shadow: 0 2rem 4rem rgba(#000000, 0.35);
+    transition: all 0.25s $main-animation-function;
+    &:hover {
+      z-index: 10;
+      transform: scale(1.1);
+      outline-offset: 2rem;
+      outline: 1.5rem solid $Medium-green;
+    }
+  }
+  .photo-1 {
+    z-index: 1;
+  }
+  .photo-2 {
+    z-index: 2;
+    left: 25rem;
+    top: 5rem;
+  }
+  .photo-3 {
+    z-index: 3;
+    top: 12rem;
+    left: 15rem;
+  }
+}

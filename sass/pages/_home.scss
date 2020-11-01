@@ -7,7 +7,7 @@
   }
   &-features {
     padding: 30rem 0;
-    margin-top: -20rem;
+    margin-top: -10rem;
     background-image: linear-gradient(
         to bottom right,
         rgba($Light-green, 0.8),
@@ -16,17 +16,7 @@
       url("../img/nat-4.jpg");
     background-position: top center;
     background-size: cover;
-    clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
-    .feature-box {
-      background-color: rgba($white-color, 0.8);
-      padding: 3rem 2.5rem;
-      border-radius: 0.3rem;
-      font-size: 1.5rem;
-      box-shadow: 0.5rem 1rem 5rem rgba(#000000, 0.15);
-      transition: transform 0.25s $main-animation-function;
-      &:hover {
-        transform: translateY(-1.5rem) scale(1.05);
-      }
-    }
+    // clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+    transform: skewY(-7deg);
   }
 }

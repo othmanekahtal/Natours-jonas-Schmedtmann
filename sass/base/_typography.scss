@@ -1,5 +1,5 @@
 @import "../abstracts/variables";
-
+@import "../abstracts/mixins";
 body {
   font-size: $default-font-size;
   font-family: "Lato", sans-serif;
@@ -31,12 +31,9 @@ body {
     }
   }
   &--secondary {
+    @include linearGradient($Light-green, $Dark-green);
     display: inline-block;
     text-align: center;
-    background-image: linear-gradient(to right, $Light-green, $Dark-green);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
     font-size: 3.5rem;
     text-transform: uppercase;
     transition: all 0.2s $main-animation-function;

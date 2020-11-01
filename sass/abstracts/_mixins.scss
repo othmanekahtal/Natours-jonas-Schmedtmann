@@ -11,3 +11,9 @@
     clear: both;
   }
 }
+@mixin linearGradient($color1, $color2) {
+  background-image: linear-gradient(to right, $color1, $color2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

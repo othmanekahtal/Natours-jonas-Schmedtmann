@@ -1,14 +1,9 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
 [class|="icon"] {
   display: inline-block;
   font-size: 6rem;
   margin-bottom: 0.5rem;
   font-weight: 900;
-  background-image: linear-gradient(
-    to right,
-    rgba($Light-green, 0.8),
-    rgba($Dark-green, 0.8)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  @include linearGradient($Light-green, $Dark-green);
 }

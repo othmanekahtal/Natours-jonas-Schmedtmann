@@ -87,6 +87,10 @@ body {
   font-weight: 700;
   text-transform: uppercase; }
 
+.heading--fourthly {
+  font-weight: 300;
+  text-transform: uppercase; }
+
 .u-center-text {
   text-align: center; }
 
@@ -200,7 +204,6 @@ body {
     transform: translateY(-1.5rem) scale(1.05); }
 
 .btn--primary {
-  display: inline-block !important;
   font-weight: 400;
   padding: 2rem 4.5rem;
   border: none;
@@ -208,11 +211,13 @@ body {
   cursor: pointer;
   position: relative;
   border-radius: 3.5rem;
-  transition: all 0.15s ease-in;
+  transition: all 0.25s ease-in;
   font-size: 1.6rem;
   text-transform: uppercase; }
   .btn--primary:hover {
-    transform: translateY(-0.3rem); }
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.3rem);
+    transition: all 0.25s ease-in; }
     .btn--primary:hover::after {
       transform: scale(1.4, 1.6);
       opacity: 0; }
@@ -258,6 +263,12 @@ body {
 .btn--animated {
   animation: move-top 1s ease-in; }
 
+.btn--green {
+  background: #55c57a;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #55c57a; }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -292,15 +303,176 @@ body {
   -webkit-background-clip: text;
   color: transparent; }
 
+.card {
+  position: relative;
+  width: 100%;
+  height: 52rem;
+  perspective: 150rem; }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
+  .card__side {
+    color: white;
+    position: absolute;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: transform 0.8s ease-in;
+    height: 100%; }
+    .card__side--front {
+      background-color: #fff;
+      position: relative;
+      z-index: 10;
+      width: 100%; }
+    .card__side--back {
+      transform: rotateY(180deg);
+      width: 100%;
+      height: 100%;
+      padding: 12.5rem 0; }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      color: #777;
+      font-size: 1.5rem;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        list-style: none;
+        padding: 1rem; }
+        .card__details ul li:not(:last-of-type) {
+          border-bottom: 0.15rem solid #eeeeee; }
+  .card__price span {
+    display: block;
+    color: white;
+    text-align: center;
+    text-transform: uppercase; }
+  .card__price--only {
+    font-size: 1.4rem; }
+  .card__price--value {
+    font-size: 4.5rem;
+    font-weight: 200; }
+  .card__picture {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+    width: 100%;
+    padding: 11.5rem;
+    background-size: cover;
+    background-blend-mode: screen; }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg"); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/nat-6.jpg"); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-7.jpg"); }
+  .card__heading {
+    font-size: 2.8rem;
+    color: #fff;
+    width: 75%;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 6rem;
+  padding-left: 9rem;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  transform: skewX(-10deg); }
+  .story::after {
+    content: "";
+    display: block;
+    clear: both; }
+  .story:hover .story__img {
+    filter: blur(3px) brightness(80%);
+    transform: translateX(-3rem) scale(1); }
+  .story:hover .story__name {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+  .story__profile {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(10deg); }
+  .story__img {
+    transform: translateX(-3rem) scale(1.4);
+    height: 100%;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .story__name {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-size: 1.7rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    opacity: 0;
+    transition: transform 0.5s;
+    backface-visibility: hidden; }
+  .story__content {
+    transform: skewX(10deg); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.15; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
 .section-about {
-  background-color: #f7f7f7;
   padding: 25rem 0;
+  background-color: #f7f7f7;
   margin-top: -20rem; }
 
 .section-features {
-  padding: 30rem 0;
+  padding: 25rem 0;
   margin-top: -10rem;
   background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
   background-position: top center;
   background-size: cover;
   transform: skewY(-7deg); }
+
+.section-tours {
+  padding: 25rem 0 20rem;
+  margin-top: -10rem;
+  background-color: #f7f7f7; }
+
+.section-stories {
+  padding: 15rem 0;
+  position: relative;
+  overflow: hidden; }

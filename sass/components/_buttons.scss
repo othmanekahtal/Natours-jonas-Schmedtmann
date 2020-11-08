@@ -1,7 +1,6 @@
 @import "../abstracts/variables";
 .btn {
   &--primary {
-    display: inline-block !important;
     font-weight: 400;
     padding: 2rem 4.5rem;
     border: none;
@@ -9,11 +8,13 @@
     cursor: pointer;
     position: relative;
     border-radius: 3.5rem;
-    transition: all 0.15s ease-in;
+    transition: all 0.25s $main-animation-function;
     font-size: $default-font-size;
     text-transform: uppercase;
     &:hover {
+      box-shadow: 0 0.5rem 1.5rem rgba(#000000, 0.15);
       transform: translateY(-0.3rem);
+      transition: all 0.25s $main-animation-function;
       &::after {
         transform: scale(1.4, 1.6);
         opacity: 0;
@@ -66,5 +67,12 @@
   }
   &--animated {
     animation: move-top 1s $main-animation-function;
+  }
+  &--green {
+    background: $Medium-green;
+    color: $white-color;
+    &::after {
+      background-color: $Medium-green;
+    }
   }
 }

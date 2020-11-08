@@ -1,0 +1,160 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+.card {
+  position: relative;
+  width: 100%;
+  height: 52rem;
+  perspective: 150rem;
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+    // you can use the negative value in rotate
+  }
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  &__side {
+    color: white;
+    position: absolute;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(#000000, 0.15);
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: transform 0.8s $main-animation-function;
+    height: 100%;
+    &--front {
+      background-color: $white-color;
+      position: relative;
+      z-index: 10;
+      width: 100%;
+    }
+    &--back {
+      transform: rotateY(180deg);
+      width: 100%;
+      height: 100%;
+      padding: 12.5rem 0;
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $light-orange,
+          $Dark-orange
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $Light-green,
+          $Dark-green
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $light-blue,
+          $Dark-blue
+        );
+      }
+    }
+  }
+  &__details {
+    padding: 3rem;
+    ul {
+      color: $gray-color;
+      font-size: 1.5rem;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        list-style: none;
+        padding: 1rem;
+        &:not(:last-of-type) {
+          border-bottom: 0.15rem solid $gray-light-color-2;
+        }
+      }
+    }
+  }
+  &__price {
+    span {
+      display: block;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &--only {
+      font-size: 1.4rem;
+    }
+    &--value {
+      font-size: 4.5rem;
+      font-weight: 200;
+    }
+  }
+  &__picture {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+    width: 100%;
+    padding: 11.5rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $light-orange,
+          $Dark-orange
+        ),
+        url("../img/nat-5.jpg");
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $Light-green,
+          $Dark-green
+        ),
+        url("../img/nat-6.jpg");
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $light-blue,
+          $Dark-blue
+        ),
+        url("../img/nat-7.jpg");
+    }
+  }
+  &__heading {
+    font-size: 2.8rem;
+    color: $white-color;
+    width: 75%;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+  }
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    // "3lax drna had l3ayba padding hna hnt heading 3ibara 3la line wahd auto ghadiiii ydiir padding fi left & right ms mlii kandirou break li line kayw9aa moxkill for fix this problem we use new property in css box-decoration-break:clone;"
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right,
+        rgba($light-orange, 0.85),
+        rgba($Dark-orange, 0.85)
+      );
+    }
+    &--2 {
+      background-image: linear-gradient(
+        to right,
+        rgba($Light-green, 0.85),
+        rgba($Dark-green, 0.85)
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to right,
+        rgba($light-blue, 0.85),
+        rgba($Dark-blue, 0.85)
+      );
+    }
+  }
+}

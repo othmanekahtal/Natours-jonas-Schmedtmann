@@ -1,11 +1,12 @@
 @import "../abstracts/variables";
 .btn {
+  cursor: pointer;
+  display: inline-block;
   &--primary {
     font-weight: 400;
-    padding: 2rem 4.5rem;
+    padding: 1.5rem 4.5rem;
     border: none;
     outline: none;
-    cursor: pointer;
     position: relative;
     border-radius: 3.5rem;
     transition: all 0.25s $main-animation-function;
@@ -37,7 +38,6 @@
   }
   &--text {
     font-size: $default-font-size;
-    display: inline-block;
     text-decoration: none;
     color: $Medium-green;
     padding: 0.3rem;

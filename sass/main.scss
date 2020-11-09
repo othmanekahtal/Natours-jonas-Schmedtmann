@@ -7,6 +7,8 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "pages/home";
+
 @import "layout/header";
 @import "layout/grid";
 @import "layout/feature-box";
@@ -17,8 +19,7 @@
 @import "components/cards";
 @import "components/story";
 @import "components/bg-video";
-@import "components/booking";
-
-@import "pages/home";
+@import "components/form";
+@import "components/footer";
 
 // vendors folder for a add a library like a font awsome and bootstrap

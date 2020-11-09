@@ -29,7 +29,7 @@
                     <span class="heading--primary--main">outdoors</span>
                     <span class="heading--primary--sub">is where life happens</span>
                 </h1>
-                <a class="btn--primary btn--white btn--animated">discover our tours</a>
+                <a class="btn btn--primary btn--white btn--animated">discover our tours</a>
             </div>
         </header>
         <main>
@@ -47,7 +47,7 @@
                     <p class="paragraph">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
                     </p>
-                    <a class='btn--text u-margin-top-small' href="#">Learn more &rarr;</a>
+                    <a class='btn btn--text u-margin-top-small' href="#">Learn more &rarr;</a>
                         </div>
                         <div class="col-1-of-2">
                             <div class="composition">
@@ -115,7 +115,7 @@
                                     <span class="card__price--only u-margin-bottom-small">only</span>
                                     <span class="card__price--value u-margin-bottom-big">$297</span>
                                     <div class="u-center-text">
-                                        <a class="btn--primary btn--white">book now !</a>
+                                        <a class="btn btn--primary btn--white">book now !</a>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
                                     <span class="card__price--only u-margin-bottom-small">only</span>
                                     <span class="card__price--value u-margin-bottom-big">$497</span>
                                     <div class="u-center-text">
-                                        <a class="btn--primary btn--white">book now !</a>
+                                        <a class="btn btn--primary btn--white">book now !</a>
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                                     <span class="card__price--only u-margin-bottom-small">only</span>
                                     <span class="card__price--value u-margin-bottom-big">$897</span>
                                     <div class="u-center-text">
-                                        <a class="btn--primary btn--white">book now !</a>
+                                        <a class="btn btn--primary btn--white">book now !</a>
                                     </div>
                                 </div>
                             </div>
@@ -179,7 +179,7 @@
                     </div>
                 </div>
                 <div class="u-center-text">
-                    <a class="btn--primary btn--green">Discover all tours</a>
+                    <a class="btn btn--primary btn--green">Discover all tours</a>
                 </div>
             </section>
             <section class="section-stories">
@@ -222,27 +222,66 @@
                     </div>
                 </div>
                 <div class="u-center-text">
-                    <a class='btn--text u-margin-top-small' href="#">Read all stories &rarr;</a>
+                    <a class='btn btn--text u-margin-top-small' href="#">Read all stories &rarr;</a>
                 </div>
             </section>
             <section class="section-booking">
                 <div class="row">
                     <div class="booking-container">
                         <div class="booking-content">
-                            <h2 class="heading--secondary u-margin-bottom-medium">
-                                Start booking now
-                            </h2>
-                            <input type="text" placeholder="Full name">
-                            <input type="email" placeholder="Email address">
-                            <input type="radio" name="group-size">
-                            <label for="group-size">Small tour group </label>
-                            <input type="radio" name="group-size">
-                            <label for="group-size">Large tour group</label>
-                            <input type="submit" class="btn btn-primary btn--animated btn--green" value="next step &rarr; " >
+                            <h2 class="heading--secondary u-margin-bottom-medium">Start booking now</h2>
+                            <form action="#" class="form-booking">
+                                <div class="input__group">
+                                    <input class="input__form" type="text" id="name" placeholder="Full name" required>
+                                    <label class="label__form" for="name">Full name</label>
+                                </div>
+                                <div class="input__group">
+                                    <input class="input__form" type="email" id="email" placeholder="Email address">
+                                    <label class="label__form" for="email">Email address</label>
+                                </div>
+                                <div class="input__group-radio">
+                                    <input type="radio" name="size" id="radio-form__small" class="input-radio__form">
+                                    <label for="radio-form__small" class="radio-form__label" >
+                                        <span class="radio-form__button"></span>
+                                        Small tour group
+                                    </label>
+                                </div>
+                                <div class="input__group-radio">
+                                    <input type="radio" name="size" id="radio-form__large" class="input-radio__form">
+                                    <label for="radio-form__large" class="radio-form__label">
+                                        <span class="radio-form__button"></span>
+                                        Large tour group
+                                    </label>
+                                </div>
+                                <div class="input__group-button u-margin-top-medium">
+                                    <button class="btn btn--primary btn--green" >next step &rarr;</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+        <footer class="footer">
+            <div class="footer__logo-box u-center-text">
+                <img src="img/logo-green-2x.png" alt="logo-footer">
+            </div>
+            <div class="row u-margin-top-big">
+                <div class="col-1-of-2">
+                    <ul class="footer__list">
+                        <li><a class="footer__anchor" href="#">company</a></li>
+                        <li><a class="footer__anchor" href="#">contact us</a></li>
+                        <li><a class="footer__anchor" href="#">careers</a></li>
+                        <li><a class="footer__anchor" href="#">privacy policy</a></li>
+                        <li><a class="footer__anchor" href="#">terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="footer__licenses">
+                        <p>Built by <a href="#" class="footer__anchor">JONAS SCHMEDTMANN</a> for his online course ADVANCED CSS AND SASS. Copyright © by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

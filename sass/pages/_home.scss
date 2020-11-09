@@ -36,5 +36,36 @@
       $Light-green,
       $Dark-green
     );
+    .row {
+      padding: 0;
+      .booking {
+        &-container {
+          background-image: linear-gradient(
+              105deg,
+              rgba($white-color, 0.9) 0%,
+              rgba($white-color, 0.9) 50%,
+              transparent 50%
+            ),
+            url("../img/nat-10.jpg");
+          background-size: 100%;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          width: 100%;
+          background-repeat: no-repeat;
+          box-shadow: 0 1.5rem 2rem rgba(#000000, 0.2);
+        }
+        &-content {
+          width: 50%;
+          padding: 6rem;
+        }
+        // // this is simple practice but you can use the linear gradient in this case
+        // &-content {
+        //   background-color: rgba($white-color, 0.9);
+        //   clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        //
+        //   padding: 6rem 14rem 6rem 6rem;
+        // }
+      }
+    }
   }
 }

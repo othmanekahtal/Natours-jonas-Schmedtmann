@@ -11,6 +11,14 @@
   font-size: 1.5rem;
   box-shadow: 0.5rem 1rem 5rem rgba(#000000, 0.15);
   transition: transform 0.25s $main-animation-function;
+  @include respond(lab-port) {
+    width: 65%;
+    margin: 0 auto;
+  }
+  @include respond(phone) {
+    width: 80%;
+    margin: 0 auto;
+  }
   &:hover {
     transform: translateY(-1.5rem) scale(1.05);
   }

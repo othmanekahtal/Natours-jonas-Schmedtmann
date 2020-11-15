@@ -14,13 +14,25 @@
     display: inline-block;
     border-top: 1px solid $gray-color !important;
     padding-top: 1.5rem;
+    @include respond(lab-port) {
+      border: none !important;
+    }
+  }
+  .row > div {
+    @include respond(lab-port) {
+      text-align: center;
+    }
   }
   &__list {
+    margin: 0 auto !important;
     font-size: inherit;
     li {
       display: inline-block;
       &:not(:last-child) {
         margin-right: 1.5rem;
+        @include respond(lab-port) {
+          margin-right: 1rem;
+        }
       }
     }
   }
@@ -41,6 +53,11 @@
   &__licenses {
     width: 80%;
     float: right;
+    @include respond(lab-port) {
+      width: 100%;
+      text-align: center;
+      float: none !important;
+    }
   }
 }
 // footer end styling

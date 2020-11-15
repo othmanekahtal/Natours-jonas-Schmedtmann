@@ -16,7 +16,32 @@
 
 html {
   font-size: 62.5%;
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+    // 1rem = 12px
+  }
+
+  @include respond(lab-land) {
+    font-size: 56.25%;
+    // 1rem = 9px
+  }
+
+  @include respond(lab-port) {
+    font-size: 50%;
+    // 1rem = 8px
+  }
+
+  @include respond(phone) {
+    font-size: 30%;
+    // 1rem = 4.8px
+  }
 }
 body {
+  overflow-x: hidden;
   box-sizing: border-box;
+  padding: 3rem;
+  @include respond(lab-port) {
+    padding: 0;
+  }
 }

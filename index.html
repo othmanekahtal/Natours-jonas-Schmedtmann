@@ -49,7 +49,7 @@
                     <span class="heading--primary--main">outdoors</span>
                     <span class="heading--primary--sub">is where life happens</span>
                 </h1>
-                <a class="btn btn--primary btn--white btn--animated">discover our tours</a>
+                <a href="#section-tours" class="btn btn--primary btn--white btn--animated">discover our tours</a>
             </div>
         </header>
         <main>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section-tours">
+            <section class="section-tours" id="section-tours">
                 <div class="u-center-text u-margin-bottom-big"><h2 class="heading--secondary">Most popular tours</h2></div>
                 <div class="row u-margin-bottom-medium">
                     <div class="col-1-of-3">
@@ -135,7 +135,8 @@
                                     <span class="card__price--only u-margin-bottom-small">only</span>
                                     <span class="card__price--value u-margin-bottom-big">$297</span>
                                     <div class="u-center-text">
-                                        <a class="btn btn--primary btn--white">book now !</a>
+                                        <a href="#popup" class="btn btn--primary btn--white">book now 
+                                        !</a>
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +164,8 @@
                                     <span class="card__price--only u-margin-bottom-small">only</span>
                                     <span class="card__price--value u-margin-bottom-big">$497</span>
                                     <div class="u-center-text">
-                                        <a class="btn btn--primary btn--white">book now !</a>
+                                        <a href="#popup" class="btn btn--primary btn--white">book now 
+                                        !</a>
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +193,8 @@
                                     <span class="card__price--only u-margin-bottom-small">only</span>
                                     <span class="card__price--value u-margin-bottom-big">$897</span>
                                     <div class="u-center-text">
-                                        <a class="btn btn--primary btn--white">book now !</a>
+                                        <a href="#popup" class="btn btn--primary btn--white">book now 
+                                        !</a>
                                     </div>
                                 </div>
                             </div>
@@ -303,5 +306,26 @@
                 </div>
             </div>
         </footer>
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <div class="popup-box__images">
+                    <img src="img/nat-8.jpg" alt="tours people">
+                    <img src="img/nat-9.jpg" alt="tours people">
+                </div>
+                <div class="popup-box__content">
+                    <h2 class="heading--secondary u-margin-bottom-small">Start booking now</h2>
+                    <div class="u-margin-bottom-small">
+                        <h3 class="heading--thirty">Important – Please read these terms before booking</h3>
+                    </div>
+                    <p class="popup__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada 
+                    </p>
+                    <div class="u-margin-top-medium">
+                        <a href="#section-tours" class="btn btn--primary btn--green">book now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

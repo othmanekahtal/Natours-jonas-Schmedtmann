@@ -56,10 +56,10 @@
       height: 100%;
       padding: 12.5rem 0;
       @include respond(lab-land) {
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
         transform: none;
         margin-top: -10rem;
-        padding: 7.5rem;
+        padding: 4rem;
         z-index: 100;
       }
       &-1 {

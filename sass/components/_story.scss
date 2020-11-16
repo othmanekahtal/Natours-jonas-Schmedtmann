@@ -8,6 +8,13 @@
   box-shadow: 0 3rem 6rem rgba(#000000, 0.1);
   border-radius: 3px;
   transform: skewX(-10deg);
+  @include respond(lab-land) {
+    transform: skewX(-5deg);
+  }
+  @include respond(lab-port) {
+    width: 100%;
+    transform: none;
+  }
   &::after {
     content: "";
     display: block;
@@ -31,6 +38,12 @@
     -webkit-shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(10deg);
+    @include respond(lab-land) {
+      transform: translateX(-3rem) skewX(5deg);
+    }
+    @include respond(lab-port) {
+      transform: translateX(-3rem) skewX(0);
+    }
     // equal  border radius 50% in child
   }
   &__img {
@@ -53,5 +66,11 @@
   }
   &__content {
     transform: skewX(10deg);
+    @include respond(lab-land) {
+      transform: skewX(5deg);
+    }
+    @include respond(lab-port) {
+      transform: none;
+    }
   }
 }

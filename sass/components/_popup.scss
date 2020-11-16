@@ -71,3 +71,28 @@
     -webkit-hyphens: auto;
   }
 }
+
+@include respond(lab-port) {
+  .popup {
+    h2 {
+      display: block;
+      text-align: center;
+    }
+    &-box__images {
+      display: none;
+    }
+    &-box__content {
+      width: 100%;
+      padding: 3rem 5rem;
+      vertical-align: middle;
+    }
+    &__text {
+      font-size: 1.4rem;
+      column-gap: initial;
+      column-count: initial;
+      column-rule: none;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+  }
+}

@@ -6,6 +6,10 @@
       font-size: $default-font-size;
       display: inline-block;
       width: 48%;
+      @include respond(phone) {
+        display: block;
+        margin-bottom: 1.5rem;
+      }
       .radio-form__button {
         display: inline-block;
         height: 3rem;

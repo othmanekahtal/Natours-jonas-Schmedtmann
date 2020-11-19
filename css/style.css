@@ -911,10 +911,8 @@ body {
   @media (max-width: 56.25em) {
     .footer {
       padding: 5rem 0; } }
-  .footer__logo-box {
-    height: 15rem; }
-    .footer__logo-box picture {
-      width: 100%; }
+  .footer__logo-box picture {
+    width: 100%; }
   .footer .row > div > * {
     display: inline-block;
     border-top: 1px solid #777 !important;

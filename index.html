@@ -311,7 +311,11 @@
     </main>
     <footer class="footer">
         <div class="footer__logo-box u-center-text">
-            <img src="img/logo-green-2x.png" alt="logo-footer">
+            <picture class="footer__logo ">
+                <source srcset="img/logo-green-small-1x.png 1x , img/logo-green-small-2x.png 2x"
+                    media="(max-width:37.5em)">
+                <img srcset="img/logo-green-1x.png 1x,img/logo-green-2x.png 2x" alt="logo-footer">
+            </picture>
         </div>
         <div class="row u-margin-top-big">
             <div class="col-1-of-2">

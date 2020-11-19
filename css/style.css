@@ -677,10 +677,10 @@ body {
       padding: 12.5rem 0; }
       @media (max-width: 75em) {
         .card__side--back {
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
           transform: none;
           margin-top: -10rem;
-          padding: 7.5rem;
+          padding: 4rem;
           z-index: 100; } }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
@@ -913,8 +913,8 @@ body {
       padding: 5rem 0; } }
   .footer__logo-box {
     height: 15rem; }
-    .footer__logo-box img {
-      height: 100%; }
+    .footer__logo-box picture {
+      width: 100%; }
   .footer .row > div > * {
     display: inline-block;
     border-top: 1px solid #777 !important;

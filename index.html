@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
     <title>Natours | Exciting tours for adventurous people</title>
@@ -73,11 +73,11 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="nat-1-large"
+                        <img srcset="img/nat-1.jpg 1x,img/nat-1-large.jpg 2x" src="img/nat-1.jpg" alt="nat-1-large"
                             class="composition__photo composition__photo--1">
-                        <img src="img/nat-2-large.jpg" alt="nat-2-large"
+                        <img srcset="img/nat-2.jpg 1x,img/nat-2-large.jpg 2x" src="img/nat-2.jpg" alt="nat-2-large"
                             class="composition__photo composition__photo--2">
-                        <img src="img/nat-3-large.jpg" alt="nat-3-large"
+                        <img srcset="img/nat-3.jpg 1x,img/nat-3-large.jpg 2x" src="img/nat-3.jpg" alt="nat-3-large"
                             class="composition__photo composition__photo--3">
                     </div>
                 </div>
@@ -312,7 +312,8 @@
             <picture class="footer__logo ">
                 <source srcset="img/logo-green-small-1x.png 1x , img/logo-green-small-2x.png 2x"
                     media="(max-width:37.5em)">
-                <img srcset="img/logo-green-1x.png 1x,img/logo-green-2x.png 2x" alt="logo-footer">
+                <img srcset="img/logo-green-1x.png 1x,img/logo-green-2x.png 2x" src="img/logo-green-1x.png"
+                    alt="logo-footer">
             </picture>
         </div>
         <div class="row u-margin-top-big">

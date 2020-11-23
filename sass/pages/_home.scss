@@ -16,20 +16,20 @@
       url("../img/nat-4.jpg");
     background-position: top center;
     background-size: cover;
-    // clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
     transform: skewY(-7deg);
   }
   &-tours {
     padding: 25rem 0 20rem;
+
     margin-top: -10rem;
     background-color: $gray-light-color-1;
     .row {
-      @include respond(lab-land) {
+      @include respond(lab-port) {
         width: 100%;
         padding: 3rem 6rem;
       }
       & [class^="col"] {
-        @include respond(lab-land) {
+        @include respond(lab-port) {
           width: 100%;
           margin-bottom: 7.5rem;
         }
@@ -102,13 +102,6 @@
             padding: 3.5rem;
           }
         }
-        // // this is simple practice but you can use the linear gradient in this case
-        // &-content {
-        //   background-color: rgba($white-color, 0.9);
-        //   clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-        //
-        //   padding: 6rem 14rem 6rem 6rem;
-        // }
       }
     }
   }

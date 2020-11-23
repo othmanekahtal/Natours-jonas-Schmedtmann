@@ -9,11 +9,20 @@
       rgba($Medium-green, 0.8),
       rgba($Dark-green, 0.8)
     ),
-    url("../img/hero.jpg");
+    url("../img/hero-small.jpg");
   background-position: top center;
   background-size: cover;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
   padding: 4rem;
+  @media (min-width: 75em) and (min-resolution: 192dpi), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($Light-green, 0.8),
+        rgba($Medium-green, 0.8),
+        rgba($Dark-green, 0.8)
+      ),
+      url("../img/hero.jpg");
+  }
   @include respond(lab-port) {
     height: 100vh;
     clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
